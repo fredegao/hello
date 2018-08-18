@@ -1,0 +1,7 @@
+FROM  openjdk:8-jdk-alpine
+
+WORKDIR /project
+ADD . /project
+
+RUN mvn package -Dmaven.test.skip=true
+CMD ["mvn"]

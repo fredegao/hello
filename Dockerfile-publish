@@ -1,0 +1,9 @@
+FROM  openjdk:8-jdk-alpine
+
+MAINTAINER "Fred Gao"
+
+COPY /project/target/hello.jar /usr/src/myapp/hello.jar
+
+WORKDIR /usr/src/myapp/
+
+ENTRYPOINT java -jar hello.jar=file:/dev/./urandom -jar /app.jar" ]
